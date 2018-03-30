@@ -1,0 +1,38 @@
+{
+  "name": "chaching-front",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "build": "webpack",
+    "serve": "webpack-dev-server --progress --colors --content-base build/ --host 0.0.0.0 --port $PORT",
+    "serve-local": "webpack-dev-server --progress --colors --content-base build/",
+    "ci:prepare": "./build.sh",
+    "ci:lint": "exit 0",
+    "ci:test": "exit 0"
+  },
+  "dependencies": {
+    "@types/react": "^16.0.36",
+    "@types/react-dom": "^16.0.3",
+    "copy-webpack-plugin": "^4.4.1",
+    "git-revision-webpack-plugin": "^2.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "mobx": "^3.5.1",
+    "mobx-react": "^4.4.1",
+    "mobx-react-devtools": "^4.2.15",
+    "npm-install-webpack-plugin": "^4.0.5",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1",
+    "webpack": "^3.11.0",
+    "webpack-auto-inject-version": "^1.0.0",
+    "webpack-merge": "^4.1.1",
+    "write-file-webpack-plugin": "^4.2.0"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.4.1",
+    "source-map-loader": "^0.2.3",
+    "typescript": "^2.7.1",
+    "typescript-eslint-parser": "^13.0.0"
+  }
+}
