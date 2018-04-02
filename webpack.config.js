@@ -32,44 +32,58 @@ const common = {
     publicPath: '/'
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.css$/, 
-        loaders: ["css-loader"],
-        include: [PATHS.app, PATHS.nodeModules],  
-
-      },
-      {
-        test: /\.sass$/,
-        loaders: ["style-loader", "css-loader", "sass-loader"],
-        include: PATHS.app
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
       },
       { 
         test: /\.jpg$/, 
-        loader: 'file-loader',
+        use: 'file-loader',
         include: PATHS.app
       },
       { 
         test: /\.svg$/, 
-        loader: 'file-loader', 
+        use: 'file-loader', 
         include: PATHS.app
       },
       { 
         test: /\.png$/, 
-        loader: 'file-loader',
+        use: 'file-loader',
         include: PATHS.app
       },
       { 
         test: /\.gif$/, 
-        loader: 'file-loader',
+        use: 'file-loader',
         include: PATHS.app
       },
       // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
-      { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+      { 
+        test: /\.tsx?$/, 
+        use: "awesome-typescript-loader" 
+      },
+      { 
+        enforce: "pre", 
+        test: /\.js$/, 
+        use: "source-map-loader"
+      }
 
-      // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
-    ]
+    ],
+    // loaders: [
+    //   // {
+    //   //   test: /\.css$/, 
+    //   //   loaders: ["css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]", "style-loader"],
+    //   //   include: [PATHS.app, PATHS.nodeModules],
+    //   //   // options: {
+    //   //   //   modules: true,
+    //   //   //   localIdentName: '[path][name]__[local]--[hash:base64:5]'
+    //   //   // }
+    //   // },
+      
+    // ]
     
   },
   plugins: [
