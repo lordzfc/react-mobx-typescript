@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "pretest": "npm run lint",
+    "test": "jest",
     "build": "webpack",
     "serve": "webpack-dev-server --progress --colors --content-base build/ --host 0.0.0.0 --port $PORT",
     "serve-local": "webpack-dev-server --progress --colors --content-base build/",
@@ -11,9 +13,23 @@
     "ci:lint": "exit 0",
     "ci:test": "exit 0"
   },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
+      ".*": "<rootDir>/node_modules/jest-css-modules"
+    },
+    "testMatch": [
+      "**/app/**/*.spec.ts?(x)"
+    ]
+  },
   "dependencies": {
     "@types/react": "^16.0.36",
-    "@types/react-dom": "^16.0.3",
+    "@types/react-dom": "^16.0.4",
     "copy-webpack-plugin": "^4.4.1",
     "git-revision-webpack-plugin": "^2.5.1",
     "html-webpack-plugin": "^2.30.1",
@@ -24,6 +40,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.1",
+    "react-test-renderer": "^16.3.0",
     "ssri": "^5.3.0",
     "webpack": "^3.11.0",
     "webpack-auto-inject-version": "^1.0.0",
@@ -32,8 +49,12 @@
   },
   "devDependencies": {
     "@types/css-modules": "^1.0.0",
+    "@types/jest": "^22.2.2",
+    "@types/react-test-renderer": "^16.0.1",
     "awesome-typescript-loader": "^3.4.1",
+    "jest-css-modules": "^1.1.0",
     "source-map-loader": "^0.2.3",
+    "ts-jest": "^22.4.2",
     "typescript": "^2.7.1",
     "typescript-eslint-parser": "^13.0.0"
   }

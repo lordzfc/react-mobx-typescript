@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<h1
+  className={undefined}
+>
+  Hello from 
+  TypeScript
+   and 
+  React
+  !
+</h1>
+`;
+
+exports[`<Hello /> renders Hello 1`] = `
+<h1
+  className={undefined}
+>
+  Hello from 
+  TypeScript
+   and 
+  React
+  !
+</h1>
+`;
