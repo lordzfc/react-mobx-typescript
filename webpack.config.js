@@ -62,7 +62,7 @@ const common = {
       },
       // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
       { 
-        test: /\.tsx?$/, 
+        test: /\.tsx?$/,
         use: "awesome-typescript-loader" 
       },
       { 
@@ -72,18 +72,6 @@ const common = {
       }
 
     ],
-    // loaders: [
-    //   // {
-    //   //   test: /\.css$/, 
-    //   //   loaders: ["css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]", "style-loader"],
-    //   //   include: [PATHS.app, PATHS.nodeModules],
-    //   //   // options: {
-    //   //   //   modules: true,
-    //   //   //   localIdentName: '[path][name]__[local]--[hash:base64:5]'
-    //   //   // }
-    //   // },
-      
-    // ]
     
   },
   plugins: [
@@ -104,7 +92,7 @@ const common = {
           dateFormat: 'dddd, mmmm dS, yyyy, h:MM:ss TT' // default
         }
       }
-    }),
+    })
   ],
   // externals: {
   //   "react": "React",
