@@ -1,7 +1,6 @@
 import * as React from "react";
 import DevTools from 'mobx-react-devtools';
 import { Hello } from "./components/Hello";
-import './app.sass';
 
 // 'HelloProps' describes the shape of props.
 // State is never set so we use the '{}' type.

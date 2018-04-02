@@ -79,7 +79,7 @@ const common = {
       template: 'app/index.html',
       ogTags: {
         type: 'website',
-        title: 'Cha-ching',
+        title: 'React Mobx Typescript Seed',
         description: 'Lorem ipsum',
       }
     }),
@@ -120,7 +120,7 @@ if(TARGET === 'serve' || TARGET === 'serve-local' ||  !TARGET) {
   });
 }
 
-if(TARGET === 'build') {
+if(TARGET === 'build' || TARGET === "ci:prepare") {
   module.exports = merge(common, {
     output: {
       path: PATHS.build,
