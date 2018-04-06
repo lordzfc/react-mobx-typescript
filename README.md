@@ -19,5 +19,6 @@ Version 1.0 has included:
 
 ## Further Development
 
-- [ ] Find webpack v4 compatible plugin for injecting 'last commit' to html code
-- [ ] Write a short doc 'how to use' things from this seed.
+- [ ] Webpack v4 compatible plugin for injecting 'last commit' to html code
+- [ ] Short doc 'how to use' things from this seed.
+- [ ] Mobx with strict mode
