@@ -6,7 +6,9 @@
         "module": "commonjs",
         "target": "es5",
         "jsx": "react",
-        "experimentalDecorators": true
+        "lib": ["es5", "es6", "dom"],
+        "experimentalDecorators": true,
+        "downlevelIteration": true
     },
     "include": [
         "./app/**/*"
