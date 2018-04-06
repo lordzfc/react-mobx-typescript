@@ -10,7 +10,7 @@ yarn install
 
 Version 1.0 has included:
 
-- [x] Webpack 3.x
+- [x] Webpack 4.x
 - [x] React
 - [x] Mobx and React Mobx
 - [x] Typescript and needed typings
@@ -19,4 +19,5 @@ Version 1.0 has included:
 
 ## Further Development
 
-- [ ] Move to Webpack 4.x
+- [ ] Find webpack v4 compatible plugin for injecting 'last commit' to html code
+- [ ] Write a short doc 'how to use' things from this seed.

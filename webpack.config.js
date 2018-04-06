@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 const NpmInstallPlugin = require('npm-install-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const WebpackAutoInject = require('webpack-auto-inject-version');
+// const WebpackAutoInject = require('webpack-auto-inject-version');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const GitRevisionPlugin = require('git-revision-webpack-plugin');
 let gitRevisionPlugin = new GitRevisionPlugin();
@@ -85,14 +85,14 @@ const common = {
         description: 'Lorem ipsum',
       }
     }),
-    new WebpackAutoInject({
-      componentsOptions: {
-        InjectAsComment: {
-          tag: 'Build {date} - commithash - ' + JSON.stringify(gitRevisionPlugin.commithash()) + ' - branch - ' + JSON.stringify(gitRevisionPlugin.branch()),
-          dateFormat: 'dddd, mmmm dS, yyyy, h:MM:ss TT' // default
-        }
-      }
-    })
+    // new WebpackAutoInject({ // doesn't work with webpack v4 :(
+    //   componentsOptions: {
+    //     InjectAsComment: {
+    //       tag: 'Build {date} - commithash - ' + JSON.stringify(gitRevisionPlugin.commithash()) + ' - branch - ' + JSON.stringify(gitRevisionPlugin.branch()),
+    //       dateFormat: 'dddd, mmmm dS, yyyy, h:MM:ss TT' // default
+    //     }
+    //   }
+    // })
   ],
   // externals: {
   //   "react": "React",
